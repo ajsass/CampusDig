@@ -31,8 +31,7 @@ class logic:
 
     def draw(self,screen,keys,mX,mY,click):
             
-            if keys[K_t]:
-                 self.numFos = 50 # FOR DEBUG
+            
             
             exit = self.current.draw(screen,keys,mX,mY,click)
 

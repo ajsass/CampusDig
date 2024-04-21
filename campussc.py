@@ -25,8 +25,7 @@ class Campusscreen:
             
             screen.blit(self.map,(0,0))
             
-            if keys[K_b]:
-                 self.renown = 1000 # FOR DEBUG
+            
                  
             
             #screen.blit(self.font.render("Campus Screen move to next by clicking one", True, (0, 0, 0)), (200, 100))
