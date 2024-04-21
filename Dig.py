@@ -52,6 +52,10 @@ class Digscreen:
         sh = pygame.image.load("tools/shovel.png").convert_alpha()
         pk = pygame.image.load("tools/pickaxe.png").convert_alpha()
 
+        self.brus = pygame.Rect(760, 5, 180, 180)
+        self.shov = pygame.Rect(760, 182, 180, 180)
+        self.pik = pygame.Rect(760, 355, 180, 180)
+
         
 
         #mini for mouse
@@ -112,6 +116,13 @@ class Digscreen:
                         self.shovel(int(mX/10),int(mY/10))
                     if(self.tool == TOOL.Pick):
                         self.pick(int(mX/10),int(mY/10))
+
+            elif(self.brus.collidepoint(mX,mY)):
+                self.tool = TOOL.Brush
+            elif(self.shov.collidepoint(mX,mY)):
+                self.tool = TOOL.Shovel
+            elif(self.pik.collidepoint(mX,mY)):
+                self.tool = TOOL.Pick
     
 
 
